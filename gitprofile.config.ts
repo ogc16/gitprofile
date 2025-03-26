@@ -2,7 +2,7 @@
 
 const CONFIG = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
+    username: 'ogc16', // Your GitHub org/user name. (This is the only required config)
   },
   /**
    * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
@@ -33,19 +33,43 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
+          title: 'Booksy',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'Booksy is a modern web application designed to enhance the book keeping. Built with a scalable and efficient tech stack, it offers a seamless and interactive interface.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'booksy.jpg',
           link: 'https://example.com',
         },
         {
-          title: 'Project Name',
+          title: 'IntruderX',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'Network Intrusion Detection System (NIDS) is a system that monitors the network traffic for suspicious activities and issues alerts when such activities are discovered.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'intruderx.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Paycy',
+          description:
+            'Comprehensive payroll system for small and medium-sized businesses.',
+          imageUrl:
+            'Paycy.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Ecoshop',
+          description:
+            'E-commerce platform for sustainable and eco-friendly products.',
+          imageUrl:
+            'ecoshop.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Sky Horizon Airways',
+          description:
+            'Sky Horizon Airways is a fictional airline company. This project is a part of my portfolio.',
+          imageUrl:
+            'sky.jpg',
           link: 'https://example.com',
         },
       ],
