@@ -189,7 +189,7 @@ const CONFIG = {
   blog: {
     source: 'dev', // medium | dev
     username: 'ogc16', // to hide blog section, keep it empty
-    limit: 4, // How many articles to display. Max is 10.
+    limit: 5, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -200,7 +200,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'lofi',
+    defaultTheme: 'system', // Default theme, 'system' or 'dark' or 'light'
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -217,33 +217,34 @@ const CONFIG = {
     themes: [
       'light',
       'dark',
-      'cupcake',
-      'bumblebee',
-      'emerald',
-      'corporate',
+      'system',
+     // 'cupcake',
+     // 'bumblebee',
+     // 'emerald',
+     // 'corporate',
       'synthwave',
       'retro',
       'cyberpunk',
       'valentine',
       'halloween',
-      'garden',
+      //'garden',
       'forest',
       'aqua',
       //'lofi',
-      'pastel',
-      'fantasy',
-      'wireframe',
+     // 'pastel',
+    //  'fantasy',
+    //  'wireframe',
       'black',
       'luxury',
       'dracula',
-      'cmyk',
-      'autumn',
+     // 'cmyk',
+      //'autumn',
       'business',
       'acid',
       'lemonade',
       'night',
       'coffee',
-      'winter',
+      //'winter',
       'dim',
       'nord',
       'sunset',
