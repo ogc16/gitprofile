@@ -76,7 +76,7 @@ const CONFIG = {
     },
   },
   seo: {
-    title: 'Caleb Ngeno Portfolio work', // SEO title
+    title: "Caleb Ngeno's Portfolio", // SEO title
     description: '',
     imageURL: '',
   },
