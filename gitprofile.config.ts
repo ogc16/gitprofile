@@ -45,7 +45,7 @@ const CONFIG = {
           description:
             'Network Intrusion Detection System (NIDS) is a system that monitors the network traffic for suspicious activities and issues alerts when such activities are discovered.',
           imageUrl:
-            'intruderx.jpg',
+            'IntruderX (3).jpg',
           link: 'https://example.com',
         },
         {
