@@ -229,7 +229,7 @@ const CONFIG = {
       'garden',
       'forest',
       'aqua',
-      'lofi',
+      //'lofi',
       'pastel',
       'fantasy',
       'wireframe',
