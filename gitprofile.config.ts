@@ -72,6 +72,14 @@ const CONFIG = {
             'sky.jpg',
           link: 'https://example.com',
         },
+        {
+          title: 'News Aggregator',
+          description:
+            'Aggregates news articles from various sources and presents them in a user-friendly format.',
+          imageUrl:
+            'aggregator.jpg',
+          link: 'https://example.com',
+        },
       ],
     },
   },
@@ -267,6 +275,7 @@ const CONFIG = {
   footer: `<div style="text-align: center;">
     <p>Email: ngenokibetcaleb@gmail.com</p>
   </div>`,
+  'footerText': `© ${new Date().getFullYear()} Caleb Ngeno. All rights reserved.`,
 
   enablePWA: true,
 };
