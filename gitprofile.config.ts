@@ -264,7 +264,9 @@ const CONFIG = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: '',
+  footer: `<div style="text-align: center;">
+    <p>Email: ngenokibetcaleb@gmail.com</p>
+  </div>`,
 
   enablePWA: true,
 };
