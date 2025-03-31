@@ -272,10 +272,23 @@ const CONFIG = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `<div style="text-align: center;">
-    <p>Email: ngenokibetcaleb@gmail.com</p>
+  footer: `<div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+    <!-- Navigation Links Section -->
+    <div style="margin-bottom: 1rem; text-align: center; width: 100%;">
+      <ul style="list-style-type: none; padding: 0; margin: 0; display: inline-flex; gap: 1rem;">
+        <li><a href="/about-us" style="text-decoration: none; color: inherit;">About</a></li>
+        <li><a href="/services" style="text-decoration: none; color: inherit;">Services</a></li>
+        <li><a href="/privacy-policy" style="text-decoration: none; color: inherit;">Privacy Policy</a></li>
+        <li><a href="/terms-of-service" style="text-decoration: none; color: inherit;">Terms of Service</a></li>
+        <li><a href="/contact" style="text-decoration: none; color: inherit;">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Copyright Section -->
+    <div style="margin-top: 1rem; text-align: center; width: 100%;">
+      <p style="margin: 0;">© ${new Date().getFullYear()} Caleb Ngeno. All rights reserved.</p>
+    </div>
   </div>`,
-  'footerText': `© ${new Date().getFullYear()} Caleb Ngeno. All rights reserved.`,
 
   enablePWA: true,
 };
