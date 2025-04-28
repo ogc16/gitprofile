@@ -159,10 +159,10 @@ const CONFIG = {
     {
       name: 'Data Protection',
       body: 'Strathmore University',
-      year: 'March 2022',
+      year: 'May 2024',
       link: 'https://drive.google.com/file/d/1x_jsJAMIfkOulIG9fBu6jIpYrc-eIYoa/view?usp=sharing',
     },
-    {
+  /*{  {
       name: 'Certified Ethical Hacker (CEH)',
       body: 'EC-Council',
       year: 'March 2022',
@@ -174,7 +174,7 @@ const CONFIG = {
       year: 'March 2022',
       link: '',
     },
-   
+   */
   ],
   educations: [
     {
