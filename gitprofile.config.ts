@@ -153,26 +153,26 @@ const CONFIG = {
       name: 'Junior Cybersecurity Analyst',
       body: 'CISCO',
       year: 'April 2025',
-      link: 'https://www.credly.com/badges/d8b495aa-1d8f-4cf9-85a4-c60aeb5028c6/public_url',
+      link: 'https://drive.google.com/file/d/1QpHOt85D0iGFI1kMPxuH4-FOYOcZo6vt/view?usp=sharing',
       imageUrl: ""
       },
     {
       name: 'Data Protection',
       body: 'Strathmore University',
       year: 'March 2022',
-      link: 'https://example.com',
+      link: 'https://drive.google.com/file/d/1x_jsJAMIfkOulIG9fBu6jIpYrc-eIYoa/view?usp=sharing',
     },
     {
       name: 'Certified Ethical Hacker (CEH)',
       body: 'EC-Council',
       year: 'March 2022',
-      link: 'https://example.com',
+      link: '',
     },
     {
       name: 'Certified Information Systems Security Professional (CISSP)',
       body: 'ISC2',
       year: 'March 2022',
-      link: 'https://example.com',
+      link: '',
     },
    
   ],
