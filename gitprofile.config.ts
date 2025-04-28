@@ -150,11 +150,31 @@ const CONFIG = {
   ],
   certifications: [
     {
-      name: 'Data Protection and Privacy',
+      name: 'Junior Cybersecurity Analyst',
+      body: 'CISCO',
+      year: 'April 2025',
+      link: 'https://www.credly.com/badges/d8b495aa-1d8f-4cf9-85a4-c60aeb5028c6/public_url',
+      imageUrl: ""
+      },
+    {
+      name: 'Data Protection',
       body: 'Strathmore University',
       year: 'March 2022',
       link: 'https://example.com',
     },
+    {
+      name: 'Certified Ethical Hacker (CEH)',
+      body: 'EC-Council',
+      year: 'March 2022',
+      link: 'https://example.com',
+    },
+    {
+      name: 'Certified Information Systems Security Professional (CISSP)',
+      body: 'ISC2',
+      year: 'March 2022',
+      link: 'https://example.com',
+    },
+   
   ],
   educations: [
     {
