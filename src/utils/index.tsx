@@ -94,6 +94,15 @@ export const getSanitizedConfig = (
             experience.from ||
             experience.to,
         ) || [],
+        
+      virtualExperiences:
+        config?.virtualExperiences?.filter(
+        (virtualExperience) =>
+            virtualExperience.title ||
+            virtualExperience.description||
+            virtualExperience.skills ,
+        ) || [],
+
       certifications:
         config?.certifications?.filter(
           (certification) =>

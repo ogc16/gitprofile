@@ -223,6 +223,13 @@ interface Experience {
   companyLink?: string;
 }
 
+interface virtualExperiences{
+  title?: string;
+  description?: string;
+  skills?: Array<string>;
+
+}
+
 interface Certification {
   body?: string;
   name?: string;
@@ -388,6 +395,8 @@ interface Config {
    * Experience list
    */
   experiences?: Array<Experience>;
+
+  virtualExperiences?: Array<virtualExperiences>;
 
   /**
    * Certifications list

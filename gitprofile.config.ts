@@ -148,6 +148,41 @@ const CONFIG = {
       companyLink: 'https://parseconsulting.co.ke',
     },
   ],
+  virtualExperiences: [
+    {
+      title: 'Mastercard Cybersecurity Virtual Experience Program on Forage - June 2024',
+      description: `Completed a job simulation where I served as an analyst on Mastercard’s Security Awareness Team.
+Helped identify and report security threats such as phishing.
+Analyzed and identified which areas of the business needed more robust security training and implemented training courses and procedures for those teams.`,
+      skills: [
+        "Cybersecurity",
+        "Technical Security Awareness",
+        "Problem Solving",
+        "Design Thinking",
+        "Communication",
+        "Security Awareness Training",
+        "Data Analysis",
+        "Data Presentation",
+        "Strategy"
+      ]
+    },
+    { 
+      title: 'Verizon Cloud Platform Job Simulation on Forage - June 2024',
+      description: `Completed a job simulation focused on developing a new VPN product for Verizon's Cloud Computing team.
+Utilized command line Python to test and ensure that the VPN met essential cloud-native traits, including redundancy, resiliency, and least-privilege.
+Researched and implemented several security measures and presented the findings in a detailed PowerPoint presentation.`,
+      skills: [
+        "Agile Environment",
+        "Coding",
+        "Concept Demonstration",
+        "Internal Communication",
+        "Meeting your team",
+        "Reflection",
+        "Research",
+        "Understanding the brief"
+      ]
+    },
+  ],
   certifications: [
     {
       name: 'Junior Cybersecurity Analyst',
