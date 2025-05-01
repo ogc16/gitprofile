@@ -136,15 +136,15 @@ const CONFIG = {
     {
       company: 'Tech Gaetano',
       position: 'Software Engineer',
-      from: 'September 2024',
+      from: 'Dec 2023',
       to: 'Present',
       companyLink: 'https://techgaetano.com',
     },
     {
       company: 'Parse Consulting',
       position: 'IT Consultant',
-      from: 'July 2020',
-      to: 'August 2024',
+      from: 'Jan 2022',
+      to: 'Oct 2023',
       companyLink: 'https://parseconsulting.co.ke',
     },
   ],
