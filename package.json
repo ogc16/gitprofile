@@ -1,16 +1,16 @@
 {
-  "name": "@arifszn/gitprofile",
-  "description": "Create an automatic portfolio based on GitHub profile",
-  "version": "3.1.0",
+  "name": "@ogc16/gitprofile",
+  "description": "Create a neat portfolio based on your GitHub profile",
+  "version": "1.1.0",
   "type": "module",
   "license": "MIT",
-  "author": "arifszn",
+  "author": "ogc16",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arifszn/gitprofile.git"
+    "url": "https://github.com/ogc16/gitprofile.git"
   },
   "bugs": {
-    "url": "https://github.com/arifszn/gitprofile/issues"
+    "url": "https://github.com/ogc16/gitprofile/issues"
   },
   "scripts": {
     "dev": "vite",
