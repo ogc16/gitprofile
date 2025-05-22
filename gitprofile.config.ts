@@ -112,7 +112,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      'https://drive.google.com/file/d/1gzy3pQF69jxRTpGrpf8hiZoHhigXELwM/view?usp=drive_link', // Empty fileUrl will hide the `Download Resume` button.
+      'https://docs.google.com/document/d/1a4KIF1wq8W_LCErHrnTuikTB74Ebuc5zmQmA-gIjbiI/edit?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     //'PHP',
@@ -197,6 +197,13 @@ Researched and implemented several security measures and presented the findings 
       year: 'May 2024',
       link: 'https://drive.google.com/file/d/1x_jsJAMIfkOulIG9fBu6jIpYrc-eIYoa/view?usp=sharing',
     },
+    {
+      name: 'Diploma in Data Analysis',
+      body: 'KUBICLE',
+      year: 'May 2023',
+      link: '',
+    },
+
   /*{  {
       name: 'Certified Ethical Hacker (CEH)',
       body: 'EC-Council',
