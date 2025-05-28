@@ -6,4 +6,5 @@
 5 . news aggregator
 6 . cars sales website (kibet motors)
 7 . blog website
+8 . simple payroll system
 

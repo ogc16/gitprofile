@@ -80,6 +80,14 @@ const CONFIG = {
             'aggregator.jpg',
           link: 'https://example.com',
         },
+        {
+          title: 'Simple Payroll',
+          description:
+            ' Simple Payroll is payroll calculator designed to help calculate taxes, and generate payslips without storing any data.',
+          imageUrl:
+            'sps.jpg',
+          link: 'https://simplepayroll.netlify.app/',
+        }
       ],
     },
   },
