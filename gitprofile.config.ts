@@ -87,7 +87,16 @@ const CONFIG = {
           imageUrl:
             'sps.jpg',
           link: 'https://simplepayroll.netlify.app/',
+        },
+        {
+        title: 'EasyBooks',
+          description:
+            ' EasyBooks is a nextjs template designed to enhance the book keeping. Built with a scalable and efficient tech stack, it offers a seamless and interactive interface.',
+          imageUrl:
+            'acme.jpg',
+          link: 'https://nextjs-dashboard-git-second-ogc16s-projects.vercel.app/',
         }
+    
       ],
     },
   },
