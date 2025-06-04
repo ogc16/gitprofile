@@ -93,7 +93,7 @@ const CONFIG = {
           description:
             ' EasyBooks is a nextjs template designed to enhance the book keeping. Built with a scalable and efficient tech stack, it offers a seamless and interactive interface.',
           imageUrl:
-            'acme.jpg',
+            'acme.png',
           link: 'https://nextjs-dashboard-git-second-ogc16s-projects.vercel.app/',
         }
     
