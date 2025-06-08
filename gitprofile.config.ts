@@ -95,10 +95,20 @@ const CONFIG = {
           imageUrl:
             'acme.png',
           link: 'https://nextjs-dashboard-git-second-ogc16s-projects.vercel.app/',
+        },
+        {
+          title: 'Jobs Seeker',
+          description:
+            'Jobs Seeker is powered by AI and provides personalized job recommendations based on user profiles and preferences.',
+          imageUrl:
+            'jobseker.jpeg',
+          link: 'https://jobseeker1.netlify.app/',
         }
+
     
       ],
     },
+
   },
   seo: {
     title: "Caleb Ngeno's Portfolio", // SEO title
