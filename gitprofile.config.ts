@@ -103,8 +103,15 @@ const CONFIG = {
           imageUrl:
             'jobseker.jpeg',
           link: 'https://jobseeker1.netlify.app/',
-        }
-
+        },
+        {
+          title: 'Data Manipulation Tool',
+          description:
+            'Data Manipulation Tool is designed to simplify the process of data cleaning, transformation, and analysis.',
+          imageUrl:
+            'dmt.jpeg',
+          link: 'https://datamanipulation.netlify.app/',
+        },
     
       ],
     },
