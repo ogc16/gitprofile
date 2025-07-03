@@ -1,20 +1,19 @@
 {
   "name": "@ogc16/gitprofile",
   "description": "Create a neat portfolio based on your GitHub profile",
-  "version": "1.1.0",
+  "version": "1.2.3",
   "type": "module",
   "license": "MIT",
   "author": "ogc16",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ogc16/gitprofile.git"
+    "url": "git+https://github.com/ogc16/gitprofile.git"
   },
   "bugs": {
     "url": "https://github.com/ogc16/gitprofile/issues"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prettier": "prettier --check \"./**/*.{js,jsx,ts,tsx,css,md,json}\"",
