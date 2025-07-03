@@ -32,7 +32,7 @@ const CONFIG = {
       header: 'Projects',
       // To hide the `External Projects` section, keep it empty.
       projects: [
-        {
+       /* {
           title: 'Booksy',
           description:
             'Booksy is a modern web application designed to enhance the book keeping. Built with a scalable and efficient tech stack, it offers a seamless and interactive interface.',
@@ -40,7 +40,7 @@ const CONFIG = {
             'booksy.jpg',
           link: 'https://example.com',
         },
-        {
+       {
           title: 'IntruderX',
           description:
             'Network Intrusion Detection System (NIDS) is a system that monitors the network traffic for suspicious activities and issues alerts when such activities are discovered.',
@@ -48,7 +48,7 @@ const CONFIG = {
             'IntruderX (3).jpg',
           link: 'https://example.com',
         },
-        {
+       {
           title: 'Paycy',
           description:
             'Comprehensive payroll system for small and medium-sized businesses.',
@@ -72,14 +72,14 @@ const CONFIG = {
             'sky.jpg',
           link: 'https://example.com',
         },
-        {
+       {
           title: 'News Aggregator',
           description:
             'Aggregates news articles from various sources and presents them in a user-friendly format.',
           imageUrl:
             'aggregator.jpg',
           link: 'https://example.com',
-        },
+        },*/
         {
           title: 'Simple Payroll',
           description:
