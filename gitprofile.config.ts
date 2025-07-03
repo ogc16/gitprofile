@@ -110,7 +110,7 @@ const CONFIG = {
             'Data Manipulation Tool is designed to simplify the process of file conversion, transformation, and analysis.',
           imageUrl:
             'dmt.jpeg',
-          link: 'https://datamanipulation.netlify.app/',
+          link: 'https://manipulationtool.streamlit.app/',
         },
     
       ],
