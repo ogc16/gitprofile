@@ -4,7 +4,13 @@
     "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "@babel/core",
+      "@babel/generator",
+      "@babel/template",
+      "@babel/traverse"
+    ]
   },
   "include": ["gitprofile.config.ts", "vite.config.ts"]
 }
