@@ -32,7 +32,40 @@ const CONFIG = {
       header: 'Projects',
       // To hide the `External Projects` section, keep it empty.
       projects: [
-       /* {
+
+        {
+          title: 'Simple Payroll',
+          description:
+            ' Simple Payroll is payroll calculator designed to help calculate taxes, and generate payslips without storing any data.',
+          imageUrl:
+            'sps.jpg',
+          link: 'https://simplepayroll.netlify.app/',
+        },
+        {
+        title: 'EasyBooks',
+          description:
+            ' EasyBooks is a nextjs template designed to enhance the book keeping. Built with a scalable and efficient tech stack, it offers a seamless and interactive interface.',
+          imageUrl:
+            'acme.png',
+          link: 'https://nextjs-dashboard-git-second-ogc16s-projects.vercel.app/',
+        },
+        {
+          title: 'Jobs Seeker',
+          description:
+            'Jobs Seeker is powered by AI and provides personalized job recommendations based on user profiles and preferences.',
+          imageUrl:
+            'jobseker.jpeg',
+          link: 'https://jobseeker1.netlify.app/',
+        },
+        {
+          title: 'Data Manipulation Tool',
+          description:
+            'Data Manipulation Tool is designed to simplify the process of file conversion, transformation, and analysis.',
+          imageUrl:
+            'dmt.jpeg',
+          link: 'https://manipulationtool.streamlit.app/',
+        },
+               {
           title: 'Booksy',
           description:
             'Booksy is a modern web application designed to enhance the book keeping. Built with a scalable and efficient tech stack, it offers a seamless and interactive interface.',
@@ -79,42 +112,11 @@ const CONFIG = {
           imageUrl:
             'aggregator.jpg',
           link: 'https://example.com',
-        },*/
-        {
-          title: 'Simple Payroll',
-          description:
-            ' Simple Payroll is payroll calculator designed to help calculate taxes, and generate payslips without storing any data.',
-          imageUrl:
-            'sps.jpg',
-          link: 'https://simplepayroll.netlify.app/',
-        },
-        {
-        title: 'EasyBooks',
-          description:
-            ' EasyBooks is a nextjs template designed to enhance the book keeping. Built with a scalable and efficient tech stack, it offers a seamless and interactive interface.',
-          imageUrl:
-            'acme.png',
-          link: 'https://nextjs-dashboard-git-second-ogc16s-projects.vercel.app/',
-        },
-        {
-          title: 'Jobs Seeker',
-          description:
-            'Jobs Seeker is powered by AI and provides personalized job recommendations based on user profiles and preferences.',
-          imageUrl:
-            'jobseker.jpeg',
-          link: 'https://jobseeker1.netlify.app/',
-        },
-        {
-          title: 'Data Manipulation Tool',
-          description:
-            'Data Manipulation Tool is designed to simplify the process of file conversion, transformation, and analysis.',
-          imageUrl:
-            'dmt.jpeg',
-          link: 'https://manipulationtool.streamlit.app/',
         },
     
       ],
     },
+    
 
   },
   seo: {
@@ -123,8 +125,8 @@ const CONFIG = {
     imageURL: '',
   },
   social: {
-    linkedin: '',
-    x: '',
+    linkedin: 'caleb-kibet-834020362',
+    x: 'caleb_cnk',
     mastodon: '',
     researchGate: '',
     facebook: '',
@@ -165,6 +167,19 @@ const CONFIG = {
     'CSS',
    // 'Antd',
     'Tailwind',
+    'Splunk',
+    'Wireshark',
+    'Nmap',
+    'Metasploit',
+    'Burp Suite',
+    'Command Line',
+    'Python',
+    'Data Analysis',
+    'Data Visualization',
+    'Power BI',
+    'Tableau',
+    'AWS',
+
   ],
   experiences: [
     {
@@ -232,11 +247,24 @@ Researched and implemented several security measures and presented the findings 
       link: 'https://drive.google.com/file/d/1x_jsJAMIfkOulIG9fBu6jIpYrc-eIYoa/view?usp=sharing',
     },
     {
-      name: 'Diploma in Data Analysis',
-      body: 'KUBICLE',
-      year: 'May 2023',
-      link: '',
+      name: 'Python Developer',
+      body: 'SoloLearn',
+      year: 'July 2024',
+      link: 'https://www.sololearn.com/certificates/CC-FJF7ZW7N',
     },
+    {
+      name: 'Data Visualization',
+      body: 'SoloLearn',
+      year: 'July 2024',
+      link: 'https://www.sololearn.com/certificates/CC-YBXTKRGO',
+    },
+   {
+      name: 'Web Development',
+      body: 'SoloLearn',
+      year: 'September 2023',
+      link: 'https://www.sololearn.com/certificates/CC-JERPHNCV',
+    
+   },
 
   /*{  {
       name: 'Certified Ethical Hacker (CEH)',
@@ -253,20 +281,27 @@ Researched and implemented several security measures and presented the findings 
    */
   ],
   educations: [
+     {
+      institution: 'Makerere University',
+      degree: 'Bachelor of Commerce',
+      from: '2026',
+      to: 'current',
+    },
     {
       institution: 'Jomo Kenyatta University of Agriculture and Technology',
       degree: 'Bachelor of Science in Information Technology',
       from: '2015',
       to: '2019',
     },
-    /*
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'Kubicle',
+      degree: 'Diploma in Data Analytics',
+      from: 'Jan 2023',
+      to: 'Dec 2023',
     },
-    */
+    
+   
+    
   ],
   publications: [
     {
