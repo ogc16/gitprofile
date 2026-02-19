@@ -71,7 +71,7 @@ const CONFIG = {
             'Booksy is a modern web application designed to enhance the book keeping. Built with a scalable and efficient tech stack, it offers a seamless and interactive interface.',
           imageUrl:
             'booksy.jpg',
-          link: 'https://example.com',
+          link: 'https://booksy-puce.vercel.app/',
         },
        {
           title: 'IntruderX',
