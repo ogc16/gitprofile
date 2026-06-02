@@ -10,6 +10,16 @@
     'abyss', 'silk', 'procyon';
 }
 
+/* Reduce brightness of synthwave theme */
+[data-theme='synthwave'] {
+  --color-base-100: #1e1040;
+  --color-base-200: #180e38;
+  --color-base-300: #130c30;
+  --color-primary: #d946ef;
+  --color-secondary: #e11d8f;
+  --color-accent: #d97706;
+}
+
 @plugin "daisyui/theme" {
   name: 'procyon';
   color-scheme: light;

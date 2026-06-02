@@ -236,7 +236,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'synthwave',
+    defaultTheme: 'retro',
     disableSwitch: false,
     respectPrefersColorScheme: false,
     displayAvatarRing: true,
