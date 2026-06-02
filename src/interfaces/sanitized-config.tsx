@@ -39,7 +39,7 @@ export interface SanitizedProjects {
 export interface SanitizedSEO {
   title?: string;
   description?: string;
-  imageURL?: string;
+  imageUrl?: string;
 }
 
 export interface SanitizedSocial {

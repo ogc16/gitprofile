@@ -20,7 +20,7 @@ const GithubProjectCard = ({
   googleAnalyticsId?: string;
 }) => {
   if (!loading && githubProjects.length === 0) {
-    return;
+    return null;
   }
 
   const renderSkeleton = () => {
@@ -92,7 +92,7 @@ const GithubProjectCard = ({
             console.error(error);
           }
 
-          window?.open(item.html_url, '_blank');
+          window?.open(item.html_url, '_blank', 'noopener,noreferrer');
         }}
       >
         <div className="flex justify-between flex-col p-8 h-full w-full">

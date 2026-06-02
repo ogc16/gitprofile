@@ -111,7 +111,7 @@ const BlogCard = ({
               console.error(error);
             }
 
-            window?.open(article.link, '_blank');
+            window?.open(article.link, '_blank', 'noopener,noreferrer');
           }}
         >
           <div className="p-8 h-full w-full">
@@ -120,7 +120,7 @@ const BlogCard = ({
                 <div className="w-24 h-24 mask mask-squircle">
                   <LazyImage
                     src={article.thumbnail}
-                    alt={'thumbnail'}
+                    alt={article.title}
                     placeholder={skeleton({
                       widthCls: 'w-full',
                       heightCls: 'h-full',

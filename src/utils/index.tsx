@@ -53,13 +53,15 @@ export const getSanitizedConfig = (
         },
         external: {
           header: config?.projects?.external?.header || 'My Projects',
-          projects: config?.projects?.external?.projects || [],
+          projects: (config?.projects?.external?.projects || []).filter(
+            (project) => project.link?.trim(),
+          ),
         },
       },
       seo: {
         title: config?.seo?.title,
         description: config?.seo?.description,
-        imageURL: config?.seo?.imageURL,
+        imageUrl: config?.seo?.imageUrl,
       },
       social: {
         linkedin: config?.social?.linkedin,
@@ -95,15 +97,7 @@ export const getSanitizedConfig = (
             experience.from ||
             experience.to,
         ) || [],
-        
-     /* virtualExperiences:
-        config?.virtualExperiences?.filter(
-        (virtualExperience) =>
-            virtualExperience.title ||
-            virtualExperience.description||
-            virtualExperience.skills ,
-        ) || [],
-*/
+
       certifications:
         config?.certifications?.filter(
           (certification) =>

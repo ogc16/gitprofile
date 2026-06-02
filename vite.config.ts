@@ -35,7 +35,17 @@ export default defineConfig({
               icons: [
                 {
                   src: 'logo.png',
-                  sizes: '64x64 32x32 24x24 16x16 192x192 512x512',
+                  sizes: '64x64 32x32 24x24 16x16',
+                  type: 'image/png',
+                },
+                {
+                  src: 'logo192.png',
+                  sizes: '192x192',
+                  type: 'image/png',
+                },
+                {
+                  src: 'logo512.png',
+                  sizes: '512x512',
                   type: 'image/png',
                 },
               ],

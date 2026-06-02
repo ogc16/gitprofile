@@ -85,7 +85,7 @@ const ExternalProjectCard = ({
             console.error(error);
           }
 
-          window?.open(item.link, '_blank');
+          window?.open(item.link, '_blank', 'noopener,noreferrer');
         }}
       >
         <div className="p-8 h-full w-full">
@@ -101,7 +101,7 @@ const ExternalProjectCard = ({
                       <div className="w-24 h-24 mask mask-squircle">
                         <LazyImage
                           src={item.imageUrl}
-                          alt={'thumbnail'}
+                          alt={item.title}
                           placeholder={skeleton({
                             widthCls: 'w-full',
                             heightCls: 'h-full',

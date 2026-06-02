@@ -78,7 +78,7 @@ const CONFIG = {
           title: 'IntruderX',
           description:
             'Network Intrusion Detection System (NIDS) that monitors network traffic for suspicious activities and issues alerts when such activities are discovered.',
-          imageUrl: 'IntruderX (3).jpg',
+          imageUrl: 'intruderx.jpg',
           link: '',
         },
         {
@@ -86,28 +86,28 @@ const CONFIG = {
           description:
             'Comprehensive payroll system for small and medium-sized businesses.',
           imageUrl: 'Paycy.jpg',
-          link: ' ',
+          link: '',
         },
         {
           title: 'Ecoshop',
           description:
             'E-commerce platform for sustainable and eco-friendly products.',
           imageUrl: 'ecoshop.jpg',
-          link: ' ',
+          link: '',
         },
         {
           title: 'Sky Horizon Airways',
           description:
             'Sky Horizon Airways is a fictional airline company. This project is a part of my portfolio.',
           imageUrl: 'sky.jpg',
-          link: ' ',
+          link: '',
         },
         {
           title: 'News Aggregator',
           description:
             'Aggregates news articles from various sources and presents them in a user-friendly format.',
           imageUrl: 'aggregator.jpg',
-          link: ' ',
+          link: '',
         },
         
       ],
@@ -115,7 +115,7 @@ const CONFIG = {
   },
   seo: {
     title: "Caleb Ngeno's Portfolio",
-    description: '',
+    description: 'Full-stack developer & IT consultant specializing in React, Node.js, and cybersecurity. Explore my projects, skills, and experience.',
     imageUrl: '',
   },
   social: {
@@ -186,37 +186,7 @@ const CONFIG = {
       companyLink: 'https://parseconsulting.co.ke',
     },
   ],
-  virtualExperiences: [
-    {
-      title: 'Mastercard Cybersecurity Virtual Experience Program on Forage - June 2024',
-      description: `Completed a job simulation where I served as an analyst on Mastercard's Security Awareness Team. Helped identify and report security threats such as phishing. Analyzed and identified which areas of the business needed more robust security training and implemented training courses and procedures for those teams.`,
-      skills: [
-        'Cybersecurity',
-        'Technical Security Awareness',
-        'Problem Solving',
-        'Design Thinking',
-        'Communication',
-        'Security Awareness Training',
-        'Data Analysis',
-        'Data Presentation',
-        'Strategy',
-      ],
-    },
-    {
-      title: 'Verizon Cloud Platform Job Simulation on Forage - June 2024',
-      description: `Completed a job simulation focused on developing a new VPN product for Verizon's Cloud Computing team. Utilized command line Python to test and ensure that the VPN met essential cloud-native traits, including redundancy, resiliency, and least-privilege. Researched and implemented several security measures and presented the findings in a detailed PowerPoint presentation.`,
-      skills: [
-        'Agile Environment',
-        'Coding',
-        'Concept Demonstration',
-        'Internal Communication',
-        'Meeting your team',
-        'Reflection',
-        'Research',
-        'Understanding the brief',
-      ],
-    },
-  ],
+
   certifications: [
     {
       name: 'ACCA Diploma in Accounting and Business',
@@ -236,12 +206,12 @@ const CONFIG = {
       year: '',
       link: '',
     },
-    {/*     {
-      name: 'Data Visualization',
-      body: 'SoloLearn',
-      year: 'July 2024',
-      link: 'https://www.sololearn.com/certificates/CC-YBXTKRGO',
-    },*/}
+    // {
+    //   name: 'Data Visualization',
+    //   body: 'SoloLearn',
+    //   year: 'July 2024',
+    //   link: 'https://www.sololearn.com/certificates/CC-YBXTKRGO',
+    // },
   ],
   educations: [
     {

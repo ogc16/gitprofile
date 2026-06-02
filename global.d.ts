@@ -103,7 +103,7 @@ interface SEO {
   /**
    * Meta image
    */
-  imageURL?: string;
+  imageUrl?: string;
 }
 
 interface Social {
@@ -221,13 +221,6 @@ interface Experience {
   from: string;
   to: string;
   companyLink?: string;
-}
-
-interface virtualExperiences{
-  title?: string;
-  description?: string;
-  skills?: Array<string>;
-
 }
 
 interface Certification {
@@ -395,8 +388,6 @@ interface Config {
    * Experience list
    */
   experiences?: Array<Experience>;
-
-  virtualExperiences?: Array<virtualExperiences>;
 
   /**
    * Certifications list
