@@ -9,7 +9,7 @@ import githubDataPlugin from './vite-plugin-github-data';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  base: CONFIG.base || '/gitprofile/',
+  base: process.env.BASE_PATH || CONFIG.base || '/gitprofile/',
   plugins: [
     react(),
     githubDataPlugin(),
