@@ -177,7 +177,7 @@ const BlogCard = ({
           <div
             className={`card compact bg-base-100 ${
               loading || (articles && articles.length)
-                ? 'shadow opacity-40'
+                ? 'shadow bg-base-100/40'
                 : 'shadow-lg'
             }`}
           >
