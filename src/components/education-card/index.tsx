@@ -64,8 +64,8 @@ const EducationCard = ({
             )}
           </h5>
         </div>
-        <div className="text-base-content text-opacity-60">
-          <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
+        <div className="text-base-content opacity-60">
+          <ol className="relative border-l border-base-300/30 my-2 mx-4">
             {loading ? (
               renderSkeleton()
             ) : (

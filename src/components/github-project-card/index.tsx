@@ -103,11 +103,11 @@ const GithubProjectCard = ({
                 <span>{item.name}</span>
               </div>
             </div>
-            <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
+            <p className="mb-5 mt-1 text-base-content opacity-60 text-sm">
               {item.description}
             </p>
           </div>
-          <div className="flex justify-between text-sm text-base-content text-opacity-60 truncate">
+          <div className="flex justify-between text-sm text-base-content opacity-60 truncate">
             <div className="flex flex-grow">
               <span className="mr-3 flex items-center">
                 <AiOutlineStar className="mr-0.5" />
@@ -138,7 +138,7 @@ const GithubProjectCard = ({
       <div className="col-span-1 lg:col-span-2">
         <div className="grid grid-cols-2 gap-6">
           <div className="col-span-2">
-            <div className="card compact bg-base-100 shadow bg-opacity-40">
+            <div className="card compact bg-base-100 shadow opacity-40">
               <div className="card-body">
                 <div className="mx-3 flex items-center justify-between mb-2">
                   <h5 className="card-title">

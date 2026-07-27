@@ -28,7 +28,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
     <div className="card shadow-lg compact bg-base-100">
       <div className="grid place-items-center py-8">
         {loading || !profile ? (
-          <div className="avatar opacity-90">
+          <div className="avatar">
             <div className="mb-8 rounded-full w-32 h-32">
               {skeleton({
                 widthCls: 'w-full',
@@ -38,7 +38,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             </div>
           </div>
         ) : (
-          <div className="avatar opacity-90">
+          <div className="avatar">
             <div
               className={`mb-8 rounded-full w-32 h-32 ${
                 avatarRing
@@ -65,12 +65,12 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             {loading || !profile ? (
               skeleton({ widthCls: 'w-48', heightCls: 'h-8' })
             ) : (
-              <span className="text-base-content opacity-70">
+              <span className="text-base-content">
                 {profile.name}
               </span>
             )}
           </h5>
-          <div className="mt-3 text-base-content text-opacity-60 font-mono">
+          <div className="mt-3 text-base-content opacity-60">
             {loading || !profile
               ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
               : profile.bio}
@@ -85,7 +85,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             <a
               href={resumeFileUrl}
               target="_blank"
-              className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
+              className="btn btn-outline btn-sm text-xs mt-6"
               download
               rel="noreferrer"
             >

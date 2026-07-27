@@ -78,14 +78,20 @@ const ListItem: React.FC<{
           wordBreak: 'break-word',
         }}
       >
-        <a
-          href={link}
-          target="_blank"
-          rel="noreferrer"
-          className="flex justify-start py-2 px-1 items-center"
-        >
-          {value}
-        </a>
+        {link ? (
+          <a
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            className="flex justify-start py-2 px-1 items-center hover:underline"
+          >
+            {value}
+          </a>
+        ) : (
+          <span className="flex justify-start py-2 px-1 items-center">
+            {value}
+          </span>
+        )}
       </div>
     </div>
   );
@@ -172,7 +178,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
-        <div className="text-base-content text-opacity-60">
+        <div className="text-base-content opacity-60">
           {loading || !profile ? (
             renderSkeleton()
           ) : (

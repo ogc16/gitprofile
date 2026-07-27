@@ -1,15 +1,5 @@
 import { useState, Fragment, useEffect } from 'react';
 
-/**
- * LazyImage component.
- *
- * @param {string} placeholder The placeholder image URL.
- * @param {string} src The image URL.
- * @param {string} alt The alt text for the image.
- * @param {object} rest Additional props for the image element.
- *
- * @returns {ReactElement} The LazyImage component.
- */
 const LazyImage: React.FC<{
   placeholder: React.ReactElement;
   src: string;
@@ -18,6 +8,7 @@ const LazyImage: React.FC<{
   [key: string]: any;
 }> = ({ placeholder, src, alt, ...rest }): React.ReactElement => {
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const imageToLoad = new Image();
@@ -26,11 +17,30 @@ const LazyImage: React.FC<{
     imageToLoad.onload = () => {
       setLoading(false);
     };
+
+    imageToLoad.onerror = () => {
+      setLoading(false);
+      setError(true);
+    };
   }, [src]);
+
+  if (error) {
+    return <Fragment>{placeholder}</Fragment>;
+  }
 
   return (
     <Fragment>
-      {loading ? placeholder : <img src={src} alt={alt} loading="lazy" {...rest} />}
+      {loading ? (
+        placeholder
+      ) : (
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          className="transition-opacity duration-300"
+          {...rest}
+        />
+      )}
     </Fragment>
   );
 };

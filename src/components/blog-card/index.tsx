@@ -140,7 +140,7 @@ const BlogCard = ({
                         addSuffix: true,
                       })}
                     </p>
-                    <p className="mt-3 text-base-content text-opacity-60 text-sm">
+                    <p className="mt-3 text-base-content opacity-60 text-sm">
                       {article.description}
                     </p>
                     <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
@@ -177,7 +177,7 @@ const BlogCard = ({
           <div
             className={`card compact bg-base-100 ${
               loading || (articles && articles.length)
-                ? 'shadow bg-opacity-40'
+                ? 'shadow opacity-40'
                 : 'shadow-lg'
             }`}
           >
