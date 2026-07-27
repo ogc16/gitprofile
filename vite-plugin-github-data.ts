@@ -1,4 +1,5 @@
 import type { Plugin, IndexHtmlTransformResult } from 'vite';
+import { loadEnv } from 'vite';
 import type CONFIG from './gitprofile.config';
 
 type ConfigType = typeof CONFIG;
@@ -28,7 +29,10 @@ export default function githubDataPlugin(): Plugin {
   return {
     name: 'vite-plugin-github-data',
 
-    async config() {
+    async config(_, { command }) {
+      const env = loadEnv(command === 'build' ? 'production' : 'development', process.cwd(), 'VITE_');
+      const token = env.VITE_GITHUB_TOKEN || process.env.GITHUB_TOKEN;
+
       const config: ConfigType = (await import('./gitprofile.config')).default;
       const username = config.github?.username;
 
@@ -37,7 +41,6 @@ export default function githubDataPlugin(): Plugin {
         return;
       }
 
-      const token = process.env.VITE_GITHUB_TOKEN || process.env.GITHUB_TOKEN;
       const headers: Record<string, string> = {
         'Content-Type': 'application/vnd.github.v3+json',
       };
