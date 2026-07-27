@@ -4,6 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 import CONFIG from './gitprofile.config';
+import githubDataPlugin from './vite-plugin-github-data';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -11,6 +12,7 @@ export default defineConfig({
   base: CONFIG.base || '/gitprofile/',
   plugins: [
     react(),
+    githubDataPlugin(),
     {
       name: 'html-inject-meta',
       transformIndexHtml(html) {
@@ -24,7 +26,41 @@ export default defineConfig({
       ? [
           VitePWA({
             registerType: 'autoUpdate',
-            workbox: { navigateFallback: undefined },
+            workbox: {
+              navigateFallback: undefined,
+              runtimeCaching: [
+                {
+                  urlPattern: /^https:\/\/api\.github\.com\/.*/i,
+                  handler: 'NetworkFirst',
+                  options: {
+                    cacheName: 'github-api-cache',
+                    expiration: {
+                      maxEntries: 10,
+                      maxAgeSeconds: 60 * 60,
+                    },
+                    networkTimeoutSeconds: 5,
+                    cacheableResponse: {
+                      statuses: [0, 200],
+                    },
+                  },
+                },
+                {
+                  urlPattern: /^https:\/\/dev\.to\/api\/.*/i,
+                  handler: 'NetworkFirst',
+                  options: {
+                    cacheName: 'devto-api-cache',
+                    expiration: {
+                      maxEntries: 5,
+                      maxAgeSeconds: 60 * 60,
+                    },
+                    networkTimeoutSeconds: 5,
+                    cacheableResponse: {
+                      statuses: [0, 200],
+                    },
+                  },
+                },
+              ],
+            },
             includeAssets: ['logo.png'],
             manifest: {
               name: 'Portfolio',

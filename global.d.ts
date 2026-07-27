@@ -441,3 +441,26 @@ interface Config {
 }
 
 declare const CONFIG: Config;
+
+interface BuildTimeGitHubData {
+  profile: {
+    avatar_url: string;
+    name: string;
+    bio: string;
+    location: string;
+    company: string;
+    public_repos: number;
+  } | null;
+  projects: Array<{
+    name: string;
+    html_url: string;
+    description: string;
+    stargazers_count: number;
+    forks_count: number;
+    language: string;
+  }>;
+}
+
+interface Window {
+  __GITHUB_DATA__?: BuildTimeGitHubData;
+}

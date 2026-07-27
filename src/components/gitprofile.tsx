@@ -11,6 +11,7 @@ import {
 import { HelmetProvider } from 'react-helmet-async';
 import '../assets/index.css';
 import { getInitialTheme, getSanitizedConfig, setupHotjar } from '../utils';
+import { getCachedData, setCachedData } from '../utils/cache';
 import { SanitizedConfig } from '../interfaces/sanitized-config';
 import ErrorPage from './error-page';
 import HeadTagEditor from './head-tag-editor';
@@ -47,7 +48,7 @@ const GitProfile = ({ config }: { config: Config }) => {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [githubProjects, setGithubProjects] = useState<GithubProject[]>([]);
 
-  const getGithubProjects = useCallback(
+  const fetchGithubProjects = useCallback(
     async (publicRepoCount: number): Promise<GithubProject[]> => {
       if (sanitizedConfig.projects.github.mode === 'automatic') {
         if (publicRepoCount === 0) {
@@ -101,24 +102,62 @@ const GitProfile = ({ config }: { config: Config }) => {
     try {
       setLoading(true);
 
+      const buildData = window.__GITHUB_DATA__;
+
+      if (buildData?.profile) {
+        setProfile({
+          avatar: buildData.profile.avatar_url,
+          name: buildData.profile.name || ' ',
+          bio: buildData.profile.bio || '',
+          location: buildData.profile.location || '',
+          company: buildData.profile.company || '',
+        });
+
+        if (sanitizedConfig.projects.github.display) {
+          if (buildData.projects.length > 0) {
+            setGithubProjects(buildData.projects);
+          } else {
+            setGithubProjects(
+              await fetchGithubProjects(buildData.profile.public_repos),
+            );
+          }
+        }
+        return;
+      }
+
+      const cachedProfile = getCachedData<Profile>('profile');
+      const cachedProjects = getCachedData<GithubProject[]>('projects');
+
+      if (cachedProfile) {
+        setProfile(cachedProfile);
+        if (sanitizedConfig.projects.github.display && cachedProjects) {
+          setGithubProjects(cachedProjects);
+        }
+        return;
+      }
+
       const response = await axios.get(
         `https://api.github.com/users/${sanitizedConfig.github.username}`,
       );
       const data = response.data;
 
-      setProfile({
+      const newProfile: Profile = {
         avatar: data.avatar_url,
         name: data.name || ' ',
         bio: data.bio || '',
         location: data.location || '',
         company: data.company || '',
-      });
+      };
+      setProfile(newProfile);
+      setCachedData('profile', newProfile);
 
       if (!sanitizedConfig.projects.github.display) {
         return;
       }
 
-      setGithubProjects(await getGithubProjects(data.public_repos));
+      const projects = await fetchGithubProjects(data.public_repos);
+      setGithubProjects(projects);
+      setCachedData('projects', projects);
     } catch (error) {
       handleError(error as AxiosError | Error);
     } finally {
@@ -127,7 +166,7 @@ const GitProfile = ({ config }: { config: Config }) => {
   }, [
     sanitizedConfig.github.username,
     sanitizedConfig.projects.github.display,
-    getGithubProjects,
+    fetchGithubProjects,
   ]);
 
   useEffect(() => {
