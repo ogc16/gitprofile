@@ -94,7 +94,7 @@ export default defineConfig({
     CONFIG: JSON.stringify(CONFIG),
   },
   build: {
-    outDir: 'docs', 
+    outDir: 'dist',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
