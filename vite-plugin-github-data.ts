@@ -37,12 +37,18 @@ export default function githubDataPlugin(): Plugin {
         return;
       }
 
+      const token = process.env.VITE_GITHUB_TOKEN || process.env.GITHUB_TOKEN;
+      const headers: Record<string, string> = {
+        'Content-Type': 'application/vnd.github.v3+json',
+      };
+      if (token) {
+        headers['Authorization'] = `Bearer ${token}`;
+      }
+
       try {
         const profileRes = await fetch(
           `https://api.github.com/users/${username}`,
-          {
-            headers: { 'Content-Type': 'application/vnd.github.v3+json' },
-          },
+          { headers },
         );
 
         if (!profileRes.ok) {
@@ -82,9 +88,7 @@ export default function githubDataPlugin(): Plugin {
               url = `https://api.github.com/search/repositories?q=${repos}+fork:true&type=Repositories`;
             }
 
-            const reposRes = await fetch(url, {
-              headers: { 'Content-Type': 'application/vnd.github.v3+json' },
-            });
+            const reposRes = await fetch(url, { headers });
 
             if (reposRes.ok) {
               const reposData = await reposRes.json();
