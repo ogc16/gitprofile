@@ -7,9 +7,9 @@ const CONFIG = {
   base: '/gitprofile/',
   projects: {
     github: {
-      display: false,
-      header: 'Github Projects',
-      mode: 'automatic',
+      display: true,
+      header: 'Tools & Utilities',
+      mode: 'manual',
       automatic: {
         sortBy: 'stars',
         limit: 8,
@@ -19,7 +19,11 @@ const CONFIG = {
         },
       },
       manual: {
-        projects: [''],
+        projects: [
+          'ogc16/password_generator',
+          'ogc16/ChromeExtensionTool',
+          'ogc16/data_manipulation_tool',
+        ],
       },
     },
     external: {
@@ -66,13 +70,6 @@ const CONFIG = {
             'A powerful mobile app facilitating delivery,Track, manage, and send parcels seamlessly via our iOS and Android apps or directly from your browser. Simplified',
           imageUrl: 'ParcelFlow.png',
           link: 'https://parcelapp.expo.app/',
-        },
-        {
-          title: 'Data Manipulation Tool',
-          description:
-            'Data Manipulation Tool is designed to simplify the process of file conversion, transformation, and analysis.',
-          imageUrl: 'dmt.jpeg',
-          link: 'https://manipulationtool.streamlit.app/',
         },
         {
           title: 'IntruderX',
