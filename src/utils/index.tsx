@@ -64,6 +64,13 @@ export const getSanitizedConfig = (
               projects: config?.projects?.apps?.projects || [],
             }
           : undefined,
+        solutions: config?.projects?.solutions
+          ? {
+              header: config?.projects?.solutions?.header || 'Business Solutions',
+              subtitle: config?.projects?.solutions?.subtitle,
+              projects: config?.projects?.solutions?.projects || [],
+            }
+          : undefined,
       },
       seo: {
         title: config?.seo?.title,

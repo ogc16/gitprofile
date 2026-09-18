@@ -2,6 +2,16 @@ import { Fragment } from 'react';
 import LazyImage from '../lazy-image';
 import { ga, skeleton } from '../../utils';
 import { SanitizedExternalProject } from '../../interfaces/sanitized-config';
+import { IconType } from 'react-icons';
+import { AiOutlineTeam, AiOutlineHome } from 'react-icons/ai';
+import { BiMoney, BiBook } from 'react-icons/bi';
+
+const iconMap: Record<string, IconType> = {
+  crm: AiOutlineTeam,
+  payroll: BiMoney,
+  rent: AiOutlineHome,
+  bookkeeping: BiBook,
+};
 
 const isFeatured = (item: SanitizedExternalProject): boolean =>
   Boolean(item.situation || item.task || item.action || item.result || item.techStack);
@@ -159,55 +169,70 @@ const ExternalProjectCard = ({
   };
 
   const renderLegacyProjects = () => {
-    return legacyProjects.map((item, index) => (
-      <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer"
-        key={index}
-        href={item.link || undefined}
-        onClick={(e) => {
-          if (!item.link) {
-            return;
-          }
+    return legacyProjects.map((item, index) => {
+      const Icon = item.icon ? iconMap[item.icon] : undefined;
 
-          e.preventDefault();
-          trackClick(item.title);
+      return (
+        <a
+          className="card shadow-lg compact bg-base-100 cursor-pointer"
+          key={index}
+          href={item.link || undefined}
+          onClick={(e) => {
+            if (!item.link) {
+              return;
+            }
 
-          window?.open(item.link, '_blank', 'noopener,noreferrer');
-        }}
-      >
-        <div className="p-8 h-full w-full">
-          <div className="flex items-center flex-col">
-            <div className="w-full">
-              <div className="px-4">
-                <div className="text-center w-full">
-                  <h2 className="font-medium text-center opacity-60 mb-2">
-                    {item.title}
-                  </h2>
-                  {item.imageUrl && (
-                    <div className="avatar opacity-90">
-                      <div className="w-24 h-24 mask mask-squircle">
-                        <LazyImage
-                          src={item.imageUrl}
-                          alt={item.title}
-                          placeholder={skeleton({
-                            widthCls: 'w-full',
-                            heightCls: 'h-full',
-                            shape: '',
-                          })}
-                        />
+            e.preventDefault();
+            trackClick(item.title);
+
+            window?.open(item.link, '_blank', 'noopener,noreferrer');
+          }}
+        >
+          <div className="p-8 h-full w-full">
+            <div className="flex items-center flex-col">
+              <div className="w-full">
+                <div className="px-4">
+                  <div className="text-center w-full">
+                    {Icon ? (
+                      <div className="w-20 h-20 rounded-2xl bg-base-300/50 flex items-center justify-center mx-auto mb-3">
+                        <Icon className="w-10 h-10 text-base-content opacity-80" />
                       </div>
-                    </div>
-                  )}
-                  <p className="mt-2 text-base-content opacity-60 text-sm text-justify">
-                    {item.description}
-                  </p>
+                    ) : (
+                      <h2 className="font-medium text-center opacity-60 mb-2">
+                        {item.title}
+                      </h2>
+                    )}
+                    {item.title && (
+                      <h2 className="font-medium text-center opacity-60 mb-2">
+                        {item.title}
+                      </h2>
+                    )}
+                    {item.imageUrl && (
+                      <div className="avatar opacity-90">
+                        <div className="w-24 h-24 mask mask-squircle">
+                          <LazyImage
+                            src={item.imageUrl}
+                            alt={item.title}
+                            placeholder={skeleton({
+                              widthCls: 'w-full',
+                              heightCls: 'h-full',
+                              shape: '',
+                            })}
+                          />
+                        </div>
+                      </div>
+                    )}
+                    <p className="mt-2 text-base-content opacity-60 text-sm text-justify">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </a>
-    ));
+        </a>
+      );
+    });
   };
 
   return (

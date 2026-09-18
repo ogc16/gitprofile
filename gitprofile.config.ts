@@ -177,6 +177,53 @@ const CONFIG = {
         },
       ],
     },
+    solutions: {
+      header: 'Business Solutions',
+      projects: [
+        {
+          title: 'NextCRM',
+          description:
+            'Open-source CRM built with Next.js 16, React 19, PostgreSQL, Prisma 7, and shadcn/ui. CRM, projects, invoicing, documents, email client & AI features.',
+          icon: 'crm',
+          link: 'https://demo.nextcrm.io',
+        },
+        {
+          title: 'Simple Payroll',
+          description:
+            'Payroll calculator that helps calculate taxes and generate payslips without storing any data. Generates payslips that can be downloaded as PDFs.',
+          icon: 'payroll',
+          link: 'https://simplepayroll.netlify.app/',
+        },
+        {
+          title: 'Paycy',
+          description:
+            'Comprehensive payroll system for small and medium-sized businesses.',
+          icon: 'payroll',
+          link: 'https://github.com/ogc16/paycy',
+        },
+        {
+          title: 'MiniBook',
+          description:
+            'Rent collection companion for tenants. Track and manage rent payments with bookkeeping features, using async storage on the user device without the need for an account.',
+          icon: 'rent',
+          link: 'https://minibook.expo.app/',
+        },
+        {
+          title: 'Booksy',
+          description:
+            'Bookkeeping for a layered organization. Fast, scalable and efficient tech stack with a seamless interface and role-based access control for data security and integrity.',
+          icon: 'bookkeeping',
+          link: 'https://booksy-puce.vercel.app/',
+        },
+        {
+          title: 'EasyBooks',
+          description:
+            'Next.js bookkeeping solution built with a scalable and efficient tech stack for a seamless and interactive interface.',
+          icon: 'bookkeeping',
+          link: 'https://easybooks64.vercel.app/',
+        },
+      ],
+    },
   },
   seo: {
     title: "Caleb Ngeno's Portfolio",

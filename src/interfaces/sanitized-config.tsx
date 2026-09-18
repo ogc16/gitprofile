@@ -24,6 +24,7 @@ export interface SanitizedExternalProject {
   title: string;
   description?: string;
   imageUrl?: string;
+  icon?: string;
   link: string;
   subtitle?: string;
   situation?: string;
@@ -43,6 +44,7 @@ export interface SanitizedProjects {
   github: SanitizedGitHubProjects;
   external: SanitizedExternalProjects;
   apps?: SanitizedExternalProjects;
+  solutions?: SanitizedExternalProjects;
 }
 
 export interface SanitizedSEO {

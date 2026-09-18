@@ -304,6 +304,16 @@ const GitProfile = ({ config }: { config: Config }) => {
                         googleAnalyticId={sanitizedConfig.googleAnalytics.id}
                       />
                     )}
+                    {sanitizedConfig.solutions &&
+                      sanitizedConfig.solutions.projects.length !== 0 && (
+                        <ExternalProjectCard
+                          loading={loading}
+                          header={sanitizedConfig.solutions.header}
+                          subtitle={sanitizedConfig.solutions.subtitle}
+                          externalProjects={sanitizedConfig.solutions.projects}
+                          googleAnalyticId={sanitizedConfig.googleAnalytics.id}
+                        />
+                      )}
                     {sanitizedConfig.projects.github.display && (
                       <GithubProjectCard
                         header={sanitizedConfig.projects.github.header}

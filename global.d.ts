@@ -91,6 +91,7 @@ interface ExternalProjects {
     title: string;
     description?: string;
     imageUrl?: string;
+    icon?: string;
     link: string;
     subtitle?: string;
     situation?: string;
@@ -110,6 +111,11 @@ interface Projects {
    * Additional (secondary) external project group
    */
   apps?: ExternalProjects;
+
+  /**
+   * Business solutions external project group
+   */
+  solutions?: ExternalProjects;
 }
 
 interface SEO {
