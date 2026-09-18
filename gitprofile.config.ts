@@ -305,7 +305,7 @@ const CONFIG = {
   },
   themeConfig: {
     defaultTheme: 'aqua',
-    disableSwitch: true,
+    disableSwitch: false,
     respectPrefersColorScheme: false,
     displayAvatarRing: true,
     themes: [
