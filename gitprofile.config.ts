@@ -291,7 +291,10 @@ const CONFIG = {
   blog: {
     source: 'dev',
     username: 'ogc16',
-    limit: 5,
+    limit: 3,
+  },
+  contact: {
+    email: 'ngenokibetcaleb@gmail.com',
   },
   googleAnalytics: {
     id: '',

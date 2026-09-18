@@ -307,6 +307,13 @@ interface Blog {
   limit?: number;
 }
 
+interface Contact {
+  /**
+   * Email address that receives contact form messages
+   */
+  email: string;
+}
+
 interface CustomTheme {
   /**
    * Primary color
@@ -446,6 +453,11 @@ interface Config {
    * Blog config
    */
   blog?: Blog;
+
+  /**
+   * Contact form config
+   */
+  contact?: Contact;
 
   /**
    * Theme config

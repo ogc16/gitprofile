@@ -125,6 +125,10 @@ export interface SanitizedBlog {
   limit: number;
 }
 
+export interface SanitizedContact {
+  email: string;
+}
+
 export interface SanitizedCustomTheme {
   primary: string;
   secondary: string;
@@ -158,6 +162,7 @@ export interface SanitizedConfig {
   googleAnalytics: SanitizedGoogleAnalytics;
   hotjar: SanitizedHotjar;
   blog: SanitizedBlog;
+  contact?: SanitizedContact;
   themeConfig: SanitizedThemeConfig;
   footer?: string;
   enablePWA: boolean;

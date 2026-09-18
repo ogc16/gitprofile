@@ -17,6 +17,7 @@ const BlogCard = ({
   googleAnalyticsId?: string;
 }) => {
   const [articles, setArticles] = useState<Article[]>([]);
+  const [showAll, setShowAll] = useState<boolean>(false);
 
   useEffect(() => {
     if (blog.source === 'medium') {
@@ -92,8 +93,10 @@ const BlogCard = ({
   };
 
   const renderArticles = () => {
+    const displayedArticles = showAll ? articles : articles.slice(0, blog.limit);
+
     return articles && articles.length ? (
-      articles.slice(0, blog.limit).map((article, index) => (
+      displayedArticles.map((article, index) => (
         <a
           className="card shadow-lg compact bg-base-100 cursor-pointer"
           key={index}
@@ -182,7 +185,7 @@ const BlogCard = ({
             }`}
           >
             <div className="card-body">
-              <div className="mx-3 mb-2">
+              <div className="mx-3 mb-2 flex items-center justify-between">
                 <h5 className="card-title">
                   {loading ? (
                     skeleton({ widthCls: 'w-28', heightCls: 'h-8' })
@@ -192,6 +195,17 @@ const BlogCard = ({
                     </span>
                   )}
                 </h5>
+                {!loading &&
+                  articles &&
+                  articles.length > blog.limit && (
+                    <button
+                      type="button"
+                      onClick={() => setShowAll((value) => !value)}
+                      className="text-sm text-base-content opacity-50 hover:underline"
+                    >
+                      {showAll ? 'Show Less' : 'See More'}
+                    </button>
+                  )}
               </div>
               <div className="col-span-2">
                 <div className="grid grid-cols-1 gap-6">
