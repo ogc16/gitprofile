@@ -64,6 +64,13 @@ interface GitHubProjects {
      */
     projects?: Array<string>;
   };
+
+  /**
+   * Per-repo custom links (repo name -> url). Overrides the repo link.
+   *
+   * example: { 'my-project1': 'https://example.com' }
+   */
+  links?: Record<string, string>;
 }
 
 interface ExternalProjects {
@@ -73,6 +80,11 @@ interface ExternalProjects {
   header?: string;
 
   /**
+   * Section subtitle
+   */
+  subtitle?: string;
+
+  /**
    * Project list
    */
   projects?: {
@@ -80,6 +92,12 @@ interface ExternalProjects {
     description?: string;
     imageUrl?: string;
     link: string;
+    subtitle?: string;
+    situation?: string;
+    task?: string;
+    action?: string;
+    result?: string;
+    techStack?: Array<string>;
   }[];
 }
 
@@ -87,6 +105,11 @@ interface Projects {
   github?: GitHubProjects;
 
   external?: ExternalProjects;
+
+  /**
+   * Additional (secondary) external project group
+   */
+  apps?: ExternalProjects;
 }
 
 interface SEO {

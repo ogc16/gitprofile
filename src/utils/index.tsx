@@ -50,13 +50,20 @@ export const getSanitizedConfig = (
           manual: {
             projects: config?.projects?.github?.manual?.projects || [],
           },
+          links: config?.projects?.github?.links || undefined,
         },
         external: {
           header: config?.projects?.external?.header || 'My Projects',
-          projects: (config?.projects?.external?.projects || []).filter(
-            (project) => project.link?.trim(),
-          ),
+          subtitle: config?.projects?.external?.subtitle,
+          projects: config?.projects?.external?.projects || [],
         },
+        apps: config?.projects?.apps
+          ? {
+              header: config?.projects?.apps?.header || 'App Portfolio',
+              subtitle: config?.projects?.apps?.subtitle,
+              projects: config?.projects?.apps?.projects || [],
+            }
+          : undefined,
       },
       seo: {
         title: config?.seo?.title,

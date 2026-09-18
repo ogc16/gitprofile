@@ -25,9 +25,78 @@ const CONFIG = {
           'ogc16/data_manipulation_tool',
         ],
       },
+      links: {
+        password_generator:
+          'https://chromewebstore.google.com/detail/jnaahcmbjoopklellmnmjhpgjineggan?utm_source=item-share-cb',
+        data_manipulation_tool: 'https://dt.techgaetano.com/',
+      },
     },
     external: {
       header: 'Projects',
+      subtitle:
+        'A curated selection of projects representing primary engineering focus across platform engineering, infrastructure automation, cybersecurity, networking, and security tooling.',
+      projects: [
+        {
+          title: 'iaas-platform',
+          subtitle: 'Infrastructure-as-a-Service Platform',
+          description:
+            'A Go-based infrastructure platform designed around multi-tenant organizations, resource management, programmable compute resources, and usage-aware infrastructure services. Maintains sub-15ms API gateway routing latency under a 1,000 req/sec load test using token-bucket middleware.',
+          situation:
+            'Organizations needed scalable, multi-tenant infrastructure with usage-based billing',
+          task: 'Build a programmable IaaS platform with tenant isolation and resource management',
+          action:
+            'Designed multi-tenant architecture with API gateway, token bucket rate limiting, and tenant compute scheduler',
+          result:
+            'Production-ready platform supporting multi-organization resource management and usage-based billing',
+          techStack: ['Go', 'REST APIs', 'Cloud Architecture', 'SaaS'],
+          link: 'https://github.com/ogc16/iaas-platform',
+        },
+        {
+          title: 'autorun',
+          subtitle: 'Centralized IT Automation Platform',
+          description:
+            'A controlled automation platform for executing and scheduling operational workloads across IT environments with access control, auditing, and operational visibility. Executes asynchronous cross-platform jobs with sub-50ms queue delay and immutable log ingestion.',
+          situation: 'IT teams needed centralized automation with governance and audit trails',
+          task: 'Build a controlled execution platform with RBAC and operational visibility',
+          action:
+            'Implemented job scheduling, live execution logs, and audit trails with Spring Boot backend',
+          result:
+            'Streamlined IT operations with controlled automation and full audit compliance',
+          techStack: ['Java 17', 'Spring Boot', 'PowerShell', 'Python', 'Bash'],
+          link: 'https://github.com/ogc16/autorun',
+        },
+        {
+          title: 'nids',
+          subtitle: 'Network Security Monitoring & Detection Platform',
+          description:
+            'An open-source cybersecurity platform focused on network visibility, packet analysis, protocol inspection, and structured security operations workflows. Parses and evaluates live Tshark packet captures at up to 100 Mbps with zero dropped buffers.',
+          situation: 'Networks lacked visibility into traffic patterns and security threats',
+          task: 'Build a monitoring platform with packet analysis and security workflows',
+          action:
+            'Integrated Wireshark, Tshark, and Npcap for deep packet inspection with security playbooks',
+          result:
+            'Enhanced network visibility and structured security operations capabilities',
+          techStack: ['TypeScript', 'Wireshark', 'Tshark', 'Npcap', 'Network Security'],
+          link: 'https://github.com/ogc16/nids',
+        },
+        {
+          title: 'cyber-shield-up',
+          subtitle: 'AI-Assisted Security Tooling',
+          description:
+            'A security-focused browser extension exploring automated vulnerability analysis and AI-assisted security assessment.',
+          situation: 'Security assessments required manual vulnerability scanning and analysis',
+          task: 'Build a browser-based tool for automated vulnerability detection with AI assistance',
+          action:
+            'Developed a Chrome Extension implementing client-side AST analysis and parallel manifest schema generation',
+          result:
+            'Reduced automated extension manifest validation and store payload assembly from 12.4s to 7.4s',
+          techStack: ['TypeScript', 'Chrome Extensions', 'AI', 'Security'],
+          link: 'https://chromewebstore.google.com/detail/mlgjidmlbpmcphkaainofhkgjelmffnn?utm_source=item-share-cb',
+        },
+      ],
+    },
+    apps: {
+      header: 'App Portfolio',
       projects: [
         {
           title: 'Simple Payroll',
@@ -76,37 +145,36 @@ const CONFIG = {
           description:
             'Network Intrusion Detection System (NIDS) that monitors network traffic for suspicious activities and issues alerts when such activities are discovered.',
           imageUrl: 'intruderx.jpg',
-          link: '',
+          link: 'https://github.com/ogc16/nids',
         },
         {
           title: 'Paycy',
           description:
             'Comprehensive payroll system for small and medium-sized businesses.',
           imageUrl: 'Paycy.jpg',
-          link: '',
+          link: 'https://github.com/ogc16/paycy',
         },
         {
           title: 'Ecoshop',
           description:
             'E-commerce platform for sustainable and eco-friendly products.',
           imageUrl: 'ecoshop.jpg',
-          link: '',
+          link: 'https://github.com/ogc16/EcoShop',
         },
         {
           title: 'Sky Horizon Airways',
           description:
             'Sky Horizon Airways is a fictional airline company. This project is a part of my portfolio.',
           imageUrl: 'sky.jpg',
-          link: '',
+          link: 'https://github.com/ogc16/SkyHorizon',
         },
         {
           title: 'News Aggregator',
           description:
             'Aggregates news articles from various sources and presents them in a user-friendly format.',
           imageUrl: 'aggregator.jpg',
-          link: '',
+          link: 'https://github.com/ogc16/aggregatorX',
         },
-        
       ],
     },
   },

@@ -17,6 +17,7 @@ export interface SanitizedGitHubProjects {
   manual: {
     projects: Array<string>;
   };
+  links?: Record<string, string>;
 }
 
 export interface SanitizedExternalProject {
@@ -24,16 +25,24 @@ export interface SanitizedExternalProject {
   description?: string;
   imageUrl?: string;
   link: string;
+  subtitle?: string;
+  situation?: string;
+  task?: string;
+  action?: string;
+  result?: string;
+  techStack?: Array<string>;
 }
 
 export interface SanitizedExternalProjects {
   header: string;
+  subtitle?: string;
   projects: SanitizedExternalProject[];
 }
 
 export interface SanitizedProjects {
   github: SanitizedGitHubProjects;
   external: SanitizedExternalProjects;
+  apps?: SanitizedExternalProjects;
 }
 
 export interface SanitizedSEO {

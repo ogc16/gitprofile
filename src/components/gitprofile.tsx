@@ -285,6 +285,18 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
                 <div className="lg:col-span-2 col-span-1">
                   <div className="grid grid-cols-1 gap-6">
+                    {sanitizedConfig.projects.external.projects.length !==
+                      0 && (
+                      <ExternalProjectCard
+                        loading={loading}
+                        header={sanitizedConfig.projects.external.header}
+                        subtitle={sanitizedConfig.projects.external.subtitle}
+                        externalProjects={
+                          sanitizedConfig.projects.external.projects
+                        }
+                        googleAnalyticId={sanitizedConfig.googleAnalytics.id}
+                      />
+                    )}
                     {sanitizedConfig.projects.github.display && (
                       <GithubProjectCard
                         header={sanitizedConfig.projects.github.header}
@@ -293,6 +305,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                         loading={loading}
                         username={sanitizedConfig.github.username}
                         googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
+                        links={sanitizedConfig.projects.github.links}
                       />
                     )}
                     {sanitizedConfig.publications.length !== 0 && (
@@ -301,17 +314,16 @@ const GitProfile = ({ config }: { config: Config }) => {
                         publications={sanitizedConfig.publications}
                       />
                     )}
-                    {sanitizedConfig.projects.external.projects.length !==
-                      0 && (
-                      <ExternalProjectCard
-                        loading={loading}
-                        header={sanitizedConfig.projects.external.header}
-                        externalProjects={
-                          sanitizedConfig.projects.external.projects
-                        }
-                        googleAnalyticId={sanitizedConfig.googleAnalytics.id}
-                      />
-                    )}
+                    {sanitizedConfig.apps &&
+                      sanitizedConfig.apps.projects.length !== 0 && (
+                        <ExternalProjectCard
+                          loading={loading}
+                          header={sanitizedConfig.apps.header}
+                          subtitle={sanitizedConfig.apps.subtitle}
+                          externalProjects={sanitizedConfig.apps.projects}
+                          googleAnalyticId={sanitizedConfig.googleAnalytics.id}
+                        />
+                      )}
                     {sanitizedConfig.blog.display && (
                       <BlogCard
                         loading={loading}

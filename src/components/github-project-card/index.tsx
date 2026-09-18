@@ -11,6 +11,7 @@ const GithubProjectCard = ({
   limit,
   username,
   googleAnalyticsId,
+  links,
 }: {
   header: string;
   githubProjects: GithubProject[];
@@ -18,6 +19,7 @@ const GithubProjectCard = ({
   limit: number;
   username: string;
   googleAnalyticsId?: string;
+  links?: Record<string, string>;
 }) => {
   if (!loading && githubProjects.length === 0) {
     return null;
@@ -74,63 +76,67 @@ const GithubProjectCard = ({
   };
 
   const renderProjects = () => {
-    return githubProjects.map((item, index) => (
-      <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer"
-        href={item.html_url}
-        key={index}
-        onClick={(e) => {
-          e.preventDefault();
+    return githubProjects.map((item, index) => {
+      const projectUrl = links?.[item.name] || item.html_url;
 
-          try {
-            if (googleAnalyticsId) {
-              ga.event('Click project', {
-                project: item.name,
-              });
+      return (
+        <a
+          className="card shadow-lg compact bg-base-100 cursor-pointer"
+          href={projectUrl}
+          key={index}
+          onClick={(e) => {
+            e.preventDefault();
+
+            try {
+              if (googleAnalyticsId) {
+                ga.event('Click project', {
+                  project: item.name,
+                });
+              }
+            } catch (error) {
+              console.error(error);
             }
-          } catch (error) {
-            console.error(error);
-          }
 
-          window?.open(item.html_url, '_blank', 'noopener,noreferrer');
-        }}
-      >
-        <div className="flex justify-between flex-col p-8 h-full w-full">
-          <div>
-            <div className="flex items-center truncate">
-              <div className="card-title text-lg tracking-wide flex text-base-content opacity-60">
-                <MdInsertLink className="my-auto" />
-                <span>{item.name}</span>
+            window?.open(projectUrl, '_blank', 'noopener,noreferrer');
+          }}
+        >
+          <div className="flex justify-between flex-col p-8 h-full w-full">
+            <div>
+              <div className="flex items-center truncate">
+                <div className="card-title text-lg tracking-wide flex text-base-content opacity-60">
+                  <MdInsertLink className="my-auto" />
+                  <span>{item.name}</span>
+                </div>
+              </div>
+              <p className="mb-5 mt-1 text-base-content opacity-60 text-sm">
+                {item.description}
+              </p>
+            </div>
+            <div className="flex justify-between text-sm text-base-content opacity-60 truncate">
+              <div className="flex flex-grow">
+                <span className="mr-3 flex items-center">
+                  <AiOutlineStar className="mr-0.5" />
+                  <span>{item.stargazers_count}</span>
+                </span>
+                <span className="flex items-center">
+                  <AiOutlineFork className="mr-0.5" />
+                  <span>{item.forks_count}</span>
+                </span>
+              </div>
+              <div>
+                <span className="flex items-center">
+                  <div
+                    className="w-3 h-3 rounded-full mr-1 opacity-60"
+                    style={{ backgroundColor: getLanguageColor(item.language) }}
+                  />
+                  <span>{item.language}</span>
+                </span>
               </div>
             </div>
-            <p className="mb-5 mt-1 text-base-content opacity-60 text-sm">
-              {item.description}
-            </p>
           </div>
-          <div className="flex justify-between text-sm text-base-content opacity-60 truncate">
-            <div className="flex flex-grow">
-              <span className="mr-3 flex items-center">
-                <AiOutlineStar className="mr-0.5" />
-                <span>{item.stargazers_count}</span>
-              </span>
-              <span className="flex items-center">
-                <AiOutlineFork className="mr-0.5" />
-                <span>{item.forks_count}</span>
-              </span>
-            </div>
-            <div>
-              <span className="flex items-center">
-                <div
-                  className="w-3 h-3 rounded-full mr-1 opacity-60"
-                  style={{ backgroundColor: getLanguageColor(item.language) }}
-                />
-                <span>{item.language}</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </a>
-    ));
+        </a>
+      );
+    });
   };
 
   return (
