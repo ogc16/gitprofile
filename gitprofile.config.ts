@@ -301,8 +301,8 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'retro',
-    disableSwitch: false,
+    defaultTheme: 'aqua',
+    disableSwitch: true,
     respectPrefersColorScheme: false,
     displayAvatarRing: true,
     themes: [
