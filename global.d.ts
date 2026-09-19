@@ -389,6 +389,18 @@ interface ThemeConfig {
   customTheme?: CustomTheme;
 }
 
+interface SkillGroup {
+  /**
+   * Category title
+   */
+  title?: string;
+
+  /**
+   * Skill names
+   */
+  skills?: Array<string>;
+}
+
 interface Config {
   /**
    * GitHub config
@@ -418,7 +430,7 @@ interface Config {
   /**
    * Skill list
    */
-  skills?: Array<string>;
+  skills?: Array<SkillGroup>;
 
   /**
    * Experience list

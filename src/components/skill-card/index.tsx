@@ -5,7 +5,7 @@ const SkillCard = ({
   skills,
 }: {
   loading: boolean;
-  skills: string[];
+  skills: Array<{ title: string; skills: string[] }>;
 }) => {
   const renderSkeleton = () => {
     const array = [];
@@ -33,18 +33,29 @@ const SkillCard = ({
           </h5>
         </div>
         <div className="p-3 flow-root">
-          <div className="-m-1 flex flex-wrap justify-center">
-            {loading
-              ? renderSkeleton()
-              : skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary rounded-full transition-transform duration-200 hover:scale-105"
-                  >
-                    {skill}
+          {loading ? (
+            <div className="flex flex-wrap justify-center">{renderSkeleton()}</div>
+          ) : (
+            <div className="-m-1 flex flex-col gap-4">
+              {skills.map((group, groupIndex) => (
+                <div key={groupIndex} className="m-1">
+                  <div className="text-xs font-semibold uppercase tracking-wider text-base-content opacity-50 mb-2 text-center">
+                    {group.title}
                   </div>
-                ))}
-          </div>
+                  <div className="flex flex-wrap justify-center">
+                    {group.skills.map((skill, index) => (
+                      <div
+                        key={index}
+                        className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary rounded-full transition-transform duration-200 hover:scale-105"
+                      >
+                        {skill}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

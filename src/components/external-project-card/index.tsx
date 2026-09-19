@@ -102,11 +102,14 @@ const ExternalProjectCard = ({
     }
 
     return (
-      <div className="text-sm">
-        <span className="font-semibold text-base-content opacity-80">
-          {label}:
-        </span>{' '}
-        <span className="text-base-content opacity-60">{value}</span>
+      <div className="flex items-start gap-2 text-sm">
+        <span className="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-primary opacity-70" />
+        <span>
+          <span className="font-semibold text-base-content opacity-90">
+            {label}:
+          </span>{' '}
+          <span className="text-base-content opacity-60">{value}</span>
+        </span>
       </div>
     );
   };

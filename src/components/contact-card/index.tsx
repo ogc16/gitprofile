@@ -14,6 +14,17 @@ const ContactCard = ({
   loading: boolean;
 }) => {
   const [status, setStatus] = useState<FormStatus>('idle');
+  const [copied, setCopied] = useState<boolean>(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -50,7 +61,7 @@ const ContactCard = ({
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
-        <div className="mx-3">
+        <div className="mx-3 flex items-center justify-between">
           <h5 className="card-title">
             {loading ? (
               skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
@@ -58,6 +69,25 @@ const ContactCard = ({
               <span className="text-base-content opacity-70">Contact</span>
             )}
           </h5>
+          {!loading && (
+            <div className="flex items-center gap-2">
+              <a
+                className="btn btn-outline btn-xs"
+                href={`mailto:${email}`}
+                title="Email me directly"
+              >
+                Email
+              </a>
+              <button
+                type="button"
+                className="btn btn-outline btn-xs"
+                onClick={handleCopyEmail}
+                title="Copy email address"
+              >
+                {copied ? 'Copied!' : 'Copy Email'}
+              </button>
+            </div>
+          )}
         </div>
         <div className="mx-3 text-base-content opacity-70">
           <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-3">
